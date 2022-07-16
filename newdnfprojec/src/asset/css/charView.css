@@ -1,0 +1,12 @@
+.charView {
+    position: relative;
+    top: 250px;
+    border: 1px solid black;
+    width: 250px;
+    height: 350px;
+    float:left;
+    margin: 0 auto;
+  }
+  .charViewList {
+    text-align: center;
+  }

@@ -6,7 +6,7 @@ function SearchServer(){
 const [serverList, setserverList] = useState([]);
 const [loopend, setloopend] = useState();
 let body = {
-  addr: "https://api.neople.co.kr/df/servers?apikey=cHQkUm6drsWx83fMwYuK1r0E13Wos2j0",
+  addr: "https://api.neople.co.kr/df/servers?apikey=kQbYDpSR4R20Lku7pxRJaDePiOiw0ZpZ",
 };
 
 useEffect(() => {

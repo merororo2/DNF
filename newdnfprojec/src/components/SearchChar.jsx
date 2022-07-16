@@ -7,22 +7,21 @@ function SearchChar() {
     const [loopOut, setloopOut] = useState("");
     const params = new URLSearchParams(window.location.search);
   
-    let searchServerName = params.get("serverNames");
+
+    let searchServerName = params.get("serverName");
     let searchChar = params.get("charSearch");
   
+
     const encodeCharName = encodeURI(searchChar);
-    
+
   
     let body = {
       addr:
-      "https://api.neople.co.kr/df/servers/" +
-      searchServerName +
-      "/characters?characterName=" +
-  
-      encodeCharName + 
-      "&limit=200&wordType=full&apikey=cHQkUm6drsWx83fMwYuK1r0E13Wos2j0",
+      "https://api.neople.co.kr/df/servers/" + searchServerName +"/characters?characterName=" + encodeCharName + "&limit=200&wordType=full&apikey=kQbYDpSR4R20Lku7pxRJaDePiOiw0ZpZ"
+    
+      
     }; 
-     
+     console.log(body);
   
     useEffect(() => {
       if (loopOut !== "1") {

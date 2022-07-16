@@ -5,11 +5,11 @@ function SearchForm(props) {
     <div>
         <form action="charView" method="get">
       <select name="serverName" id="serverName">
-      <option value="all">전체 </option>
+      <option value="all" >전체 </option>
         {props.serverList.map((servers) => (
         // console.log(servers)
        
-      <option key={servers.serverId} value={servers.serverId}>{servers.serverName}</option>
+      <option key={servers.serverId} name={servers.serverId} value={servers.serverId}>{servers.serverName}</option>
      
         ))}
         </select>
