@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../asset/css/charView.css";
 function CharView(props) {
+  console.log(props);
   return (
     <div className="charViewList">
       {props.charId.map((charInfo) => (
@@ -10,11 +12,15 @@ function CharView(props) {
           data-id={charInfo.characterId}
           data-server={charInfo.serverId}
         >
-          <img
-            src={`https://img-api.neople.co.kr/df/servers/${charInfo.serverId}/characters/${charInfo.characterId}?zoom=1`}
-            alt=""
-            className="charImg"
-          />
+          <a
+            href={`/CharViewInfo?serverName=${charInfo.serverId}&chartersId=${charInfo.characterId}`}
+          >
+            <img
+              src={`https://img-api.neople.co.kr/df/servers/${charInfo.serverId}/characters/${charInfo.characterId}?zoom=1`}
+              alt=""
+              className="charImg"
+            />
+          </a>
           <h2>{charInfo.characterName}</h2>
           <i>{charInfo.jobName}</i>
         </div>

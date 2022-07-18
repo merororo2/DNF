@@ -20,7 +20,6 @@ function SearchChar() {
       encodeCharName +
       "&limit=30&wordType=full&apikey=kQbYDpSR4R20Lku7pxRJaDePiOiw0ZpZ",
   };
-  console.log(body);
 
   useEffect(() => {
     if (loopOut !== "1") {
@@ -35,7 +34,7 @@ function SearchChar() {
 
   return (
     <div>
-      <CharView charId={charId} />{" "}
+      <CharView charId={charId} />
     </div>
   );
 }
