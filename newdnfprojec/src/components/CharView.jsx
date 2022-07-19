@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../asset/css/charView.css";
 function CharView(props) {
-  console.log(props);
   return (
     <div className="charViewList">
       {props.charId.map((charInfo) => (

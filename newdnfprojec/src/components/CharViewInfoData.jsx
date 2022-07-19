@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CharViewInfo from "./CharViewInfo";
+import CharItemData from "./CharItemData";
 function CharViewInfoData() {
   const [chardata, setcharData] = useState([]);
   const [loopOut1, setloopOut1] = useState("");

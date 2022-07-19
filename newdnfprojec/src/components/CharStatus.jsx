@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CharItem from "./CharItem";
+import ChrStatusView from "./ChrStatusView";
 
-function CharItemData() {
+function CharStatus() {
   const params = new URLSearchParams(window.location.search);
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
-  const [charItem, setCharItem] = useState([]);
+  const [charState, setcharState] = useState([]);
   const [loop, setLoop] = useState();
   let body = {
     addr:
@@ -14,24 +14,20 @@ function CharItemData() {
       serverNames +
       "/characters/" +
       charName +
-      "/equip/equipment?apikey=kQbYDpSR4R20Lku7pxRJaDePiOiw0ZpZ",
+      "/status?apikey=kQbYDpSR4R20Lku7pxRJaDePiOiw0ZpZ",
   };
-
   useEffect(() => {
     if (loop !== "1") {
       const res = axios
         .post("https://dnf-redirect.herokuapp.com", body)
         .then((result) => {
-          setCharItem(result.data.equipment);
+          setcharState(result.data.status);
           setLoop("1");
         });
     }
   }, []);
-  return (
-    <div>
-      <CharItem equipment={charItem} />
-    </div>
-  );
+
+  return <div>{<ChrStatusView states={charState} />}</div>;
 }
 
-export default CharItemData;
+export default CharStatus;
