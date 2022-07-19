@@ -9,7 +9,9 @@ function CharItemData() {
   useEffect(() => {
     const res = axios
       .post("https://dnf-redirect.herokuapp.com", body)
-      .then((result) => {});
+      .then((result) => {
+				
+			});
   }, []);
 
   return <div>CharItemData</div>;
