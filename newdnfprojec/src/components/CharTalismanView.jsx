@@ -1,6 +1,7 @@
 import React from "react";
 
 function CharTalismanView(props) {
+  console.log();
   return (
     <div>
       {props.talisman.map((talis) => (
@@ -10,6 +11,7 @@ function CharTalismanView(props) {
             alt=""
           />
           <span>{talis.talisman.itemName}</span>
+          <span>{talis.runes.itemName}</span>
         </div>
       ))}
     </div>
