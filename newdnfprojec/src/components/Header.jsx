@@ -1,9 +1,12 @@
-
 import React from "react";
+import "../asset/css/header.css";
+import mainLogo from "../asset/images/logo.jpg";
 function Header() {
   return (
     <div className="mainName">
-      <h1>API-DNF-PROJECT</h1>
+      <a href="/">
+        <img src={mainLogo} alt="" />
+      </a>
     </div>
   );
 }

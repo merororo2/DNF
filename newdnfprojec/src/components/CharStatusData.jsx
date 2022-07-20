@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CharAvartaView from "./CharAvartaView";
+import ChrStatusView from "./ChrStatusView";
 
-function CharAvatar() {
+function CharStatusData() {
   const params = new URLSearchParams(window.location.search);
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
-  const [charAvatar, setCharAvatar] = useState([]);
+  const [charState, setcharState] = useState([]);
   const [loop, setLoop] = useState();
-
   let body = {
     addr:
       "https://api.neople.co.kr/df/servers/" +
       serverNames +
       "/characters/" +
       charName +
-      "/equip/avatar?apikey=kQbYDpSR4R20Lku7pxRJaDePiOiw0ZpZ",
+      "/status?apikey=kQbYDpSR4R20Lku7pxRJaDePiOiw0ZpZ",
   };
-
   useEffect(() => {
     if (loop !== "1") {
       const res = axios
         .post("https://dnf-redirect.herokuapp.com", body)
         .then((result) => {
-          setCharAvatar(result.data.avatar);
+          setcharState(result.data.status);
           setLoop("1");
         });
     }
   }, []);
-  return <div>{<CharAvartaView avatar={charAvatar} />}</div>;
+
+  return <div>{<ChrStatusView states={charState} />}</div>;
 }
-export default CharAvatar;
+
+export default CharStatusData;

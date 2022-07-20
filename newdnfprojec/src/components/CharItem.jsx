@@ -5,7 +5,10 @@ function CharItem(props) {
     <div>
       {props.equipment.map((dd) => (
         <div key={dd.slotId} data={dd.slotId}>
-          <img src={`https://img-api.neople.co.kr/df/items/${dd.itemId}`}></img>
+          <img
+            src={`https://img-api.neople.co.kr/df/items/${dd.itemId}`}
+            alt="equipImg"
+          ></img>
           <p>{dd.slotName}</p>
           <p>{dd.itemName}</p>
         </div>

@@ -1,14 +1,16 @@
 import React from "react";
 import "../asset/css/charView.css";
-import CharAvatar from "./CharAvatar";
-import CharStatus from "./CharStatus";
-import CharItemData from "./CharItemData";
+import CharAvatar from "./CharAvatarData";
+import CharStatus from "./CharStatusData";
+import CharItem from "./CharItemData";
+import CharCreature from "./CharCreatureData";
+import CharFlag from "./CharFlagData";
+import CharTalisman from "./CharTalismanData";
 function CharViewInfo(props) {
   const charDatas = props.charData;
   const params = new URLSearchParams(window.location.search);
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
-
   return (
     <div className="charInfo">
       <div className=" imgBakGround">
@@ -25,7 +27,10 @@ function CharViewInfo(props) {
       <b>모험단 : {charDatas.adventureName}</b>
       {/* <CharItemData /> */}
       {/* <CharStatus /> */}
-      <CharAvatar />
+      {/* <CharAvatar /> */}
+      {/* <CharCreature /> */}
+      {/* <CharFlag /> */}
+      <CharTalisman />
       <ul className="nav"></ul>
     </div>
   );

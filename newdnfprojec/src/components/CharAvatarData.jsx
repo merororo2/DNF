@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CharItem from "./CharItem";
+import CharAvartaView from "./CharAvartaView";
 
-function CharItemData() {
+function CharAvatarData() {
   const params = new URLSearchParams(window.location.search);
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
-  const [charItem, setCharItem] = useState([]);
+  const [charAvatar, setCharAvatar] = useState([]);
   const [loop, setLoop] = useState();
+
   let body = {
     addr:
       "https://api.neople.co.kr/df/servers/" +
       serverNames +
       "/characters/" +
       charName +
-      "/equip/equipment?apikey=kQbYDpSR4R20Lku7pxRJaDePiOiw0ZpZ",
+      "/equip/avatar?apikey=kQbYDpSR4R20Lku7pxRJaDePiOiw0ZpZ",
   };
 
   useEffect(() => {
@@ -22,17 +23,12 @@ function CharItemData() {
       const res = axios
         .post("https://dnf-redirect.herokuapp.com", body)
         .then((result) => {
-          console.log(result.data.equipment);
-          setCharItem(result.data.equipment);
+          console.log(result.data.avatar);
+          setCharAvatar(result.data.avatar);
           setLoop("1");
         });
     }
   }, []);
-  return (
-    <div>
-      <CharItem equipment={charItem} />
-    </div>
-  );
+  return <div>{<CharAvartaView avatar={charAvatar} />}</div>;
 }
-
-export default CharItemData;
+export default CharAvatarData;

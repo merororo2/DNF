@@ -11,7 +11,6 @@ function CharAvartaView(props) {
             src={`https://img-api.neople.co.kr/df/items/${avatars.itemId}`}
           ></img>
           <span>{avatars.itemName}</span>
-          <span>{}</span>
         </div>
       ))}
     </div>
