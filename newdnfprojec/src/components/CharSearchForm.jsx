@@ -1,8 +1,8 @@
 import React from "react";
-
+import "../asset/css/searchForm.css";
 function CharSearchForm(props) {
   return (
-    <div>
+    <div className="forms">
       <form action="charView" method="get">
         <select name="serverName" id="serverName">
           <option value="all">전체 </option>
