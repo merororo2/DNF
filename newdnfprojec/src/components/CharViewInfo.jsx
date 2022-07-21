@@ -8,12 +8,13 @@ import CharFlag from "./CharFlagData";
 import CharTalisman from "./CharTalismanData";
 function CharViewInfo(props) {
   const charDatas = props.charData;
+
   const params = new URLSearchParams(window.location.search);
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
   return (
     <div className="charInfo">
-      <div className=" imgBakGround">
+      <div className=" imgBackGround">
         <img
           src={`https://img-api.neople.co.kr/df/servers/${serverNames}/characters/${charName}?zoom=1`}
           alt=""
@@ -27,10 +28,10 @@ function CharViewInfo(props) {
       <b>모험단 : {charDatas.adventureName}</b>
       {/* <CharItemData /> */}
       {/* <CharStatus /> */}
-      {/* <CharAvatar /> */}
+      <CharAvatar />
       {/* <CharCreature /> */}
       {/* <CharFlag /> */}
-      <CharTalisman />
+      {/* <CharTalisman /> */}
       <ul className="nav"></ul>
     </div>
   );

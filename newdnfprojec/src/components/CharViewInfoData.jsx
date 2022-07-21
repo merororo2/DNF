@@ -5,7 +5,7 @@ import CharViewInfo from "./CharViewInfo";
 import CharItemData from "./CharItemData";
 function CharViewInfoData() {
   const [chardata, setcharData] = useState([]);
-  const [loopOut1, setloopOut1] = useState("");
+  let loop = "";
   const params = new URLSearchParams(window.location.search);
 
   let charServer = params.get("serverName");
@@ -21,12 +21,12 @@ function CharViewInfoData() {
   };
 
   useEffect(() => {
-    if (loopOut1 !== "1") {
+    if (loop !== "1") {
       const res = axios
         .post("https://dnf-redirect.herokuapp.com", body)
         .then((result) => {
           setcharData(result.data);
-          setloopOut1("1");
+          loop = "1";
         });
     }
   }, []);

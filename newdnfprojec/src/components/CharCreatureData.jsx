@@ -6,9 +6,9 @@ function CharCreatureData() {
   const params = new URLSearchParams(window.location.search);
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
-  const [loop, setLoop] = useState("");
-  const [datas, setDatas] = useState([]);
 
+  const [datas, setDatas] = useState([]);
+  let loop = "";
   let body = {
     addr:
       "https://api.neople.co.kr/df/servers/" +
@@ -20,12 +20,10 @@ function CharCreatureData() {
 
   useEffect(() => {
     if (loop !== "1") {
-      const res = axios
-        .post("https://dnf-redirect.herokuapp.com", body)
-        .then((result) => {
-          setDatas(result.data.creature);
-          setLoop("1");
-        });
+      axios.post("https://dnf-redirect.herokuapp.com", body).then((result) => {
+        setDatas(result.data.creature);
+        loop = "1";
+      });
     }
   }, []);
 

@@ -1,24 +1,9 @@
 .charView {
-  position: relative;
-  top: 250px;
-  width: 250px;
-  height: 350px;
   border: 1px solid black;
-  float: left;
-  margin: 0 auto;
+  width: 220px;
+  height: 350px;
 }
-.charViewList {
-  margin: 0 auto;
-  text-align: center;
-}
-.charImg {
-  position: relative;
-  top: -30px;
-}
-
-.imgBakGround {
-  background-color: #dfdfdf;
-}
-li {
-  list-style-type: none;
+.charView img:hover {
+  transform: scale(1.5, 1.5);
+  opacity: 0.8;
 }

@@ -3,12 +3,11 @@ import "../asset/css/searchForm.css";
 function CharSearchForm(props) {
   return (
     <div className="forms">
-      <form action="charView" method="get">
+      <form action="charView" method="get" name="forms">
         <select name="serverName" id="serverName">
           <option value="all">전체 </option>
           {props.serverList.map((servers) => (
             // console.log(servers)
-
             <option
               key={servers.serverId}
               name={servers.serverId}

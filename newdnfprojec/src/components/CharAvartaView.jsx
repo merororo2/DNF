@@ -1,7 +1,6 @@
 import React from "react";
 
 function CharAvartaView(props) {
-  console.log(props.avatar);
   return (
     <div>
       {props.avatar.map((avatars) => (

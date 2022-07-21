@@ -7,7 +7,8 @@ function CharAvatarData() {
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
   const [charAvatar, setCharAvatar] = useState([]);
-  const [loop, setLoop] = useState();
+
+  let loop = "";
 
   let body = {
     addr:
@@ -20,13 +21,10 @@ function CharAvatarData() {
 
   useEffect(() => {
     if (loop !== "1") {
-      const res = axios
-        .post("https://dnf-redirect.herokuapp.com", body)
-        .then((result) => {
-          console.log(result.data.avatar);
-          setCharAvatar(result.data.avatar);
-          setLoop("1");
-        });
+      axios.post("https://dnf-redirect.herokuapp.com", body).then((result) => {
+        setCharAvatar(result.data.avatar);
+        loop = "1";
+      });
     }
   }, []);
   return <div>{<CharAvartaView avatar={charAvatar} />}</div>;

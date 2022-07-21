@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchServer />
       <Router>
         <Routes>
+          <Route path="/" element={<SearchServer />} />
           <Route path="/CharViewInfo" element={<CharViewInfoData />} />
           <Route path="/charView" element={<SearchChar />} />
         </Routes>

@@ -7,7 +7,7 @@ function CharItemData() {
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
   const [charItem, setCharItem] = useState([]);
-  const [loop, setLoop] = useState();
+  let loop = "";
   let body = {
     addr:
       "https://api.neople.co.kr/df/servers/" +
@@ -19,13 +19,11 @@ function CharItemData() {
 
   useEffect(() => {
     if (loop !== "1") {
-      const res = axios
-        .post("https://dnf-redirect.herokuapp.com", body)
-        .then((result) => {
-          console.log(result.data.equipment);
-          setCharItem(result.data.equipment);
-          setLoop("1");
-        });
+      axios.post("https://dnf-redirect.herokuapp.com", body).then((result) => {
+        console.log(result.data.equipment);
+        setCharItem(result.data.equipment);
+        loop = "1";
+      });
     }
   }, []);
   return (

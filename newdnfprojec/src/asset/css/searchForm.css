@@ -1,3 +1,29 @@
 .forms {
-  z-index: 10;
+  border: 1px solid black;
+  position: relative;
+  width: 560px;
+  height: 50px;
+  margin: 0 auto;
+}
+input {
+  width: 250px;
+  height: 40px;
+  border: none;
+}
+
+select {
+  text-align: center;
+  position: relative;
+  width: 130px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+button {
+  position: relative;
+  width: 180px;
+  height: 50px;
+  border: none;
+  background-color: #90cdd8;
+  cursor: pointer;
 }
