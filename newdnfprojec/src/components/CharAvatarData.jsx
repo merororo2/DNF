@@ -23,6 +23,7 @@ function CharAvatarData() {
     if (loop !== "1") {
       axios.post("https://dnf-redirect.herokuapp.com", body).then((result) => {
         setCharAvatar(result.data.avatar);
+
         loop = "1";
       });
     }

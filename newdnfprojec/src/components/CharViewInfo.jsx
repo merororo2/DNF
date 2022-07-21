@@ -13,6 +13,20 @@ function CharViewInfo(props) {
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
 
+  function ter() {
+    let tf = document.getElementsByTagName("p");
+
+    switch (tf) {
+      case "equip":
+        return <CharItem />;
+
+      case "crea":
+        return <CharCreature />;
+      default:
+        break;
+    }
+  }
+
   return (
     <div className="charInfo">
       <div className=" imgBackGround">
@@ -27,9 +41,16 @@ function CharViewInfo(props) {
       <span className="charJobName"> 직업 : {charDatas.jobName}</span>
       <span className="charGuildName">길드 : {charDatas.guildName} </span>
       <span className="charAdvenName">모험단 : {charDatas.adventureName}</span>
-      <CharItem />
+      {/* 
+      <p id="equip" onClick={ter}>
+        equip
+      </p>
+      <p id="crea" onClick={ter}>
+        크리쳐
+      </p> */}
+
       {/* <CharStatus /> */}
-      {/* <CharAvatar /> */}
+      <CharAvatar />
       {/* <CharCreature /> */}
       {/* <CharFlag /> */}
       {/* <CharTalisman /> */}

@@ -1,0 +1,17 @@
+.avatarSlotName {
+  border: 1px solid black;
+  background-color: #dfdfdf;
+}
+.avatarInfo {
+  width: 500px;
+  text-align: center;
+  margin: auto;
+}
+.avatars {
+  height: 40px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+.avatarImg {
+  position: relative;
+}
