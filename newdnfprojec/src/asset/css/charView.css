@@ -1,9 +1,36 @@
+.charViewList {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.characterCardContainer {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.characterCardContainer:nth-child(1) {
+  margin-top: 0px;
+}
+.characterCardContainer:nth-child(2) {
+  margin-top: 0px;
+}
+.characterCardContainer:nth-child(3) {
+  margin-top: 0px;
+}
+.characterCardContainer:nth-child(4) {
+  margin-top: 0px;
+}
 .charView {
   border: 1px solid black;
-  width: 220px;
+  width: 210px;
   height: 350px;
 }
 .charView img:hover {
   transform: scale(1.5, 1.5);
-  opacity: 0.8;
+  opacity: 0.6;
 }

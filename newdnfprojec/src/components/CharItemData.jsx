@@ -20,7 +20,6 @@ function CharItemData() {
   useEffect(() => {
     if (loop !== "1") {
       axios.post("https://dnf-redirect.herokuapp.com", body).then((result) => {
-        console.log(result.data.equipment);
         setCharItem(result.data.equipment);
         loop = "1";
       });

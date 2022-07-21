@@ -12,6 +12,7 @@ function CharViewInfo(props) {
   const params = new URLSearchParams(window.location.search);
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
+
   return (
     <div className="charInfo">
       <div className=" imgBackGround">
@@ -21,18 +22,17 @@ function CharViewInfo(props) {
           className="charImg"
         />
       </div>
-      <span>레벨 : {charDatas.level}</span>
-      <span>각성명 : {charDatas.jobGrowName}</span>
-      <span> 직업 : {charDatas.jobName}</span>
-      <b>길드 : {charDatas.guildName} </b>
-      <b>모험단 : {charDatas.adventureName}</b>
-      {/* <CharItemData /> */}
+      <span className="charLevel">레벨 : {charDatas.level}</span>
+      <span className="charGrowName">각성명 : {charDatas.jobGrowName}</span>
+      <span className="charJobName"> 직업 : {charDatas.jobName}</span>
+      <span className="charGuildName">길드 : {charDatas.guildName} </span>
+      <span className="charAdvenName">모험단 : {charDatas.adventureName}</span>
+      <CharItem />
       {/* <CharStatus /> */}
-      <CharAvatar />
+      {/* <CharAvatar /> */}
       {/* <CharCreature /> */}
       {/* <CharFlag /> */}
       {/* <CharTalisman /> */}
-      <ul className="nav"></ul>
     </div>
   );
 }
