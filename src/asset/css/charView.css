@@ -34,3 +34,26 @@
   transform: scale(1.5, 1.5);
   opacity: 0.6;
 }
+.charImg  {
+  position: relative;
+}
+.charImg {
+  text-align: center;
+  left:3%;
+  top: -470px;
+}
+.imgBackGround {
+opacity: 0.7;
+  height: 350px;
+  background-image:url("../images/던파배경.png")
+}
+.status {
+}
+span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+

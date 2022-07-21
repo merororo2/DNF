@@ -13,48 +13,32 @@ function CharViewInfo(props) {
   let serverNames = params.get("serverName");
   let charName = params.get("chartersId");
 
-  function ter() {
-    let tf = document.getElementsByTagName("p");
-
-    switch (tf) {
-      case "equip":
-        return <CharItem />;
-
-      case "crea":
-        return <CharCreature />;
-      default:
-        break;
-    }
-  }
 
   return (
     <div className="charInfo">
-      <div className=" imgBackGround">
-        <img
-          src={`https://img-api.neople.co.kr/df/servers/${serverNames}/characters/${charName}?zoom=1`}
+      <p className="imgBackGround">
+      </p>
+      <img
+          src={`https://img-api.neople.co.kr/df/servers/${serverNames}/characters/${charName}?zoom=2`}
           alt=""
           className="charImg"
         />
-      </div>
+
       <span className="charLevel">레벨 : {charDatas.level}</span>
       <span className="charGrowName">각성명 : {charDatas.jobGrowName}</span>
       <span className="charJobName"> 직업 : {charDatas.jobName}</span>
+      
       <span className="charGuildName">길드 : {charDatas.guildName} </span>
       <span className="charAdvenName">모험단 : {charDatas.adventureName}</span>
-      {/* 
-      <p id="equip" onClick={ter}>
-        equip
-      </p>
-      <p id="crea" onClick={ter}>
-        크리쳐
-      </p> */}
+    
+    
 
       {/* <CharStatus /> */}
       <CharAvatar />
       {/* <CharCreature /> */}
       {/* <CharFlag /> */}
       {/* <CharTalisman /> */}
-    </div>
+      </div>
   );
 }
 
