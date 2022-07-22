@@ -34,26 +34,19 @@
   transform: scale(1.5, 1.5);
   opacity: 0.6;
 }
-.charImg  {
-  position: relative;
+
+
+.charinfo {
+    box-shadow: 0 8px 15px rgb(0 0 0 / 10%);
+
+    border: 1px solid #e8ebee;
+   justify-content: center;
+   align-items: center;
 }
-.charImg {
-  text-align: center;
-  left:3%;
-  top: -470px;
-}
-.imgBackGround {
-opacity: 0.7;
-  height: 350px;
-  background-image:url("../images/던파배경.png")
-}
-.status {
-}
-span {
+.cinfo {
+  font-size: 0.8em;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
 }
-

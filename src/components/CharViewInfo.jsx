@@ -14,27 +14,50 @@ function CharViewInfo(props) {
   let charName = params.get("chartersId");
 
 
-  return (
-    <div className="charInfo">
-      <p className="imgBackGround">
-      </p>
-      <img
-          src={`https://img-api.neople.co.kr/df/servers/${serverNames}/characters/${charName}?zoom=2`}
-          alt=""
-          className="charImg"
-        />
-
-      <span className="charLevel">레벨 : {charDatas.level}</span>
-      <span className="charGrowName">각성명 : {charDatas.jobGrowName}</span>
-      <span className="charJobName"> 직업 : {charDatas.jobName}</span>
+  function test111() {
+ let fdf = document.getElementsByClassName('navMenu');
       
-      <span className="charGuildName">길드 : {charDatas.guildName} </span>
-      <span className="charAdvenName">모험단 : {charDatas.adventureName}</span>
+   console.log(fdf);
+  }
+
+
+  return (
+    <div className="charcontainer">
+
+      <div className="charinfo">
+      <div className="py-3 d-flex justify-content-center"> {charDatas.jobGrowName}</div>
+      <img
+          src={`https://img-api.neople.co.kr/df/servers/${serverNames}/characters/${charName}?zoom=1`}
+          alt=""
+          className=""
+        
+        />
+          <div className="mb-1"><strong><h2>{charDatas.characterName}</h2></strong></div>
+        <div className="cinfo">
+  <div className="mb-2 mx-2 "> 직업 : {charDatas.jobName}</div>
+  <div className="mb-2 mx-2"> 길드 : {charDatas.guildName}</div>
+  <div className="mb-2 mx-2">모험단 : {charDatas.adventureName}</div>
+  <div className="mb-2 mx-2"> 레벨 : {charDatas.level}</div>
+ 
+
+
+  </div>
+      {/* <ul className="navMenu">
+        <li id ="equip" onClick={test111}><a href="#">장비</a></li>
+        <li id ="avatar"><a href="#">아바타</a></li>
+        <li id ="crea"><a href="#">크리쳐</a></li>
+      </ul> */}
+</div>
+
+      
+      
+    
+
     
     
 
-      {/* <CharStatus /> */}
-      <CharAvatar />
+      <CharStatus />
+      {/* <CharAvatar /> */}
       {/* <CharCreature /> */}
       {/* <CharFlag /> */}
       {/* <CharTalisman /> */}
