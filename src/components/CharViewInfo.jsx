@@ -72,25 +72,25 @@ function CharViewInfo(props) {
           className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(3)}
         >
-          휘장
+          크리쳐
         </button>
         <button
           className={toggleState === 4 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(4)}>
         
-          탈리스만
+          휘장
         </button>
         <button
           className={toggleState === 5 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(5)}
         >
-          능력치
+          틸리스만
         </button>
         <button
           className={toggleState === 6 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(6)}
         >
-          Tab 6
+          능력치
         </button>
       </div>
 
