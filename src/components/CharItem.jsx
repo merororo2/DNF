@@ -1,7 +1,6 @@
 import React from "react";
-
+import "../asset/css/item.css"
 function CharItem(props) {
-  console.log(props.equipment);
   return (
     <div>
       <table className="table table-bordered">
@@ -14,10 +13,21 @@ function CharItem(props) {
               src={`https://img-api.neople.co.kr/df/items/${dd.itemId}`}
               alt="equipImg"
             />
+         
             </td>
           
           <td className="slotName">{dd.slotName}</td>
-          <td className="itemName">  {dd.itemName}</td>
+          <td className="itemName">  <strong>{dd.itemName}</strong>  
+
+            {dd.enchant.status.map((aa)=> (
+            
+              <small key={aa.name} className="enchant">{aa.name} : {aa.value}</small>
+            ))}
+             
+            
+              
+       
+         </td>
         
         </tr>
       ))}
