@@ -1,10 +1,10 @@
-.enchant {
+.runes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     font-size: 0.7em;
 }
-.itmsflex{
+.talisman {
     display: flex;
     width: 100%;
   align-items: center;

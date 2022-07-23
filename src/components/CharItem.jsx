@@ -2,26 +2,29 @@ import React from "react";
 import "../asset/css/item.css"
 function CharItem(props) {
   return (
-    <div>
-      <table className="table table-bordered">
+    <div className="itemView">
+      <table className="table table-bordered " id="itemViews">
           <tbody>
-      {props.equipment.map((dd) => (
+      {props.equipment.map((items) => (
         
-        <tr key={dd.slotId} data={dd.slotId}>
-            <td>
+        <tr key={items.slotId} data={items.slotId} className="itmsflex">
+            <td className="">
             <img
-              src={`https://img-api.neople.co.kr/df/items/${dd.itemId}`}
+              src={`https://img-api.neople.co.kr/df/items/${items.itemId}`}
               alt="equipImg"
             />
-         
+         </td>
+       
+          <td className="w-25">
+          {items.slotName}
             </td>
-          
-          <td className="slotName">{dd.slotName}</td>
-          <td className="itemName">  <strong>{dd.itemName}</strong>  
+            <td className="w-100">
+      
+           <strong>{items.itemName}</strong>  
 
-            {dd.enchant.status.map((aa)=> (
+            {items.enchant.status.map((enchant)=> (
             
-              <small key={aa.name} className="enchant">{aa.name} : {aa.value}</small>
+              <small key={enchant.name} className="enchant">{enchant.name} : {enchant.value}</small>
             ))}
              
             

@@ -1,20 +1,39 @@
 import React, { useEffect } from "react";
 
+import "../asset/css/runes.css"
 function CharTalismanView(props) {
+  console.log(props.talisman);
   return (
-    <div>
+   
+      <table className="table table-bordered">
+        <tbody>
       {props.talisman !== null &&
         props.talisman !== [] &&
         props.talisman.map((talis) => (
-          <div key={talis.talisman.itemId}>
+         
+            <tr key={talis.talisman.itemId} className="talisman">
+              <td className="w-50">
             <img
               src={`https://img-api.neople.co.kr/df/items/${talis.talisman.itemId}`}
               alt=""
             />
-            <span>{talis.talisman.itemName}</span>
-          </div>
+            </td>
+            <td className="w-100">
+           {talis.talisman.itemName}
+            {talis.runes.map((runes)=> (
+            <span key={runes.itemId} className="runes">
+            <small>{runes.itemName}</small>
+            </span>
+           
+          ))}
+            </td>
+            </tr>
+         
         ))}
-    </div>
+        
+         </tbody>
+      </table>
+  
   );
 }
 

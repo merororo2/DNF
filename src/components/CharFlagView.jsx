@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../asset/css/flag.css"
 function CharFlagView(props) {
   // const imgUri =
   //   props.flag.itemId !== undefined
@@ -7,16 +7,22 @@ function CharFlagView(props) {
   //     : "as";
   return (
     <div className="flagInfo">
+      <table className="table table-bordered">
+          <tbody>
       {props.flag.itemId !== undefined && (
-        <span>
+       <tr key={props.flag.itemId} className="flag">
+        <td className="w-50">
           <img
             src={`https://img-api.neople.co.kr/df/items/${props.flag.itemId}`}
             alt="flagImg"
           />
-          <h3>{props.flag.itemName}</h3>
-          <i>{props.flag.itemAbility}</i>
-        </span>
+          </td>
+          <td className="w-100"> {props.flag.itemName}     <span className="flagAbility">{props.flag.itemAbility}</span> </td>
+    
+          </tr>
       )}
+      </tbody>
+      </table>
     </div>
   );
 }
