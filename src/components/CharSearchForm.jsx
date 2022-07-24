@@ -11,8 +11,8 @@ function CharSearchForm(props) {
   // }
 
   return (
-    <div className="forms">
-      <form action="charView" method="get" name="forms">
+    <div className="formsInfo">
+      <form action="charView" method="get" className="forms">
         <select name="serverName" id="serverName">
           <option value="all">전체 </option>
           {props.serverList.map((servers) => (
