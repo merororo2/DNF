@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 
 import "../asset/css/runes.css"
 function CharTalismanView(props) {
-  console.log(props.talisman);
   return (
    
       <table className="table table-bordered">

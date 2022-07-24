@@ -1,12 +1,14 @@
 import React from "react";
 import "../asset/css/item.css"
 function CharItem(props) {
-  return (
+
+    return (
     <div className="itemView">
       <table className="table table-bordered " id="itemViews">
+      {props.equipment !== null && (
           <tbody>
+           
       {props.equipment.map((items) => (
-        
         <tr key={items.slotId} data={items.slotId} className="itmsflex">
             <td className="">
             <img
@@ -19,22 +21,22 @@ function CharItem(props) {
           {items.slotName}
             </td>
             <td className="w-100">
-      
+            
            <strong>{items.itemName}</strong>  
-
-            {items.enchant.status.map((enchant)=> (
+         
+            {/* {items.enchant.status.map((enchant)=> (
             
               <small key={enchant.name} className="enchant">{enchant.name} : {enchant.value}</small>
             ))}
-             
-            
-              
-       
+             */}
+           
          </td>
-        
         </tr>
+       
       ))}
+     
       </tbody>
+      )}
       </table>
     </div>
   );
