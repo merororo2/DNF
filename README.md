@@ -8,7 +8,7 @@
 <br/>
 
 
- ✨ [던파API Github](https://github.com/merororo2/DNF) 
+ ⏩ [던파API Github](https://github.com/merororo2/DNF) 
 
 ---
 ## 사용기술
