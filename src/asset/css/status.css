@@ -1,16 +1,27 @@
-.statusTable {
-    width: 70%;
-    text-align: center;
-    margin: auto;
+
+.statsInfo {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    align-content: center;
+   border: 3px solid #dfdfdf;
 }
 
+.stateView {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    box-shadow: 1px 1px 1px 1px #dfdfdf;
+}
 
-#tablestatus {
-    margin-top: 15px;
-    box-shadow: 0 8px 15px rgb(0 0 0 / 10%);
-    border: 1px solid #e8ebee;
+.statusName{
+    width: 54%;
+    border: 1px solid #dfdfdf;
+ 
+
+}
+
+.statusVlaue{
+    width: 46%;
+    border: 1px solid #dfdfdf;
+
 }

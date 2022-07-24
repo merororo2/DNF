@@ -7,13 +7,13 @@ function CharAvartaView(props) {
       <table className="table table-bordered ">
         <tbody>
       {props.avatar.map((avatars) => (
-        <tr key={avatars.slotId} className="table-light">
+        <tr key={avatars.slotId} className="avatarView">
       <td>  <img
             src={`https://img-api.neople.co.kr/df/items/${avatars.itemId}`}    
           />
       </td>
-      <td>{avatars.slotName}</td>
-       <td><strong> {avatars.itemName} </strong> - <small>{avatars.optionAbility}</small> </td>
+      <td className="w-25">{avatars.slotName}</td>
+       <td className="w-100"><strong> {avatars.itemName} </strong> <span className="avatarStatus"> <small>{avatars.optionAbility}</small> </span></td>
        
         </tr>
       ))}
