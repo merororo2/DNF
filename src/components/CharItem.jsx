@@ -24,11 +24,11 @@ function CharItem(props) {
             
            <strong>{items.itemName}</strong>  
          
-            {/* {items.enchant.status.map((enchant)=> (
+            {items.enchant.status.map((enchant)=> (
             
               <small key={enchant.name} className="enchant">{enchant.name} : {enchant.value}</small>
             ))}
-             */}
+            
            
          </td>
         </tr>
